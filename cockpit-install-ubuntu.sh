@@ -36,6 +36,7 @@ show_step "Adding 45Drives repository" $!
 (sudo apt-get update >/dev/null 2>&1 && sudo apt install -y cockpit-navigator cockpit-file-sharing >/dev/null 2>&1) &
 show_step "Installing Cockpit Navigator and File Sharing modules" $!
 
+
 # Step 6: Check if Samba is installed and install if missing
 if ! dpkg -l | grep -q samba; then
   (sudo apt install -y samba >/dev/null 2>&1) &
